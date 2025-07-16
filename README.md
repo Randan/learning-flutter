@@ -12,17 +12,74 @@ A project for learning Flutter framework as part of the **Flutter Mobile Develop
 
 This project contains various lessons and exercises for learning Flutter:
 
-- `lib/` - Main application code and lesson modules
-  - `features/` - Feature-based organization
-    - `homeworks/` - Homework assignments and exercises
-      - `lesson_13/` - Custom Widgets and Layout
-        - `custom_box.dart` - Custom container widget
-        - `homework_13_screen.dart` - Main screen for lesson 13
-  - `main.dart` - Application entry point
-- `android/` - Android platform-specific code
-- `ios/` - iOS platform-specific code
-- `web/` - Web platform-specific code
-- `test/` - Unit and widget tests
+```
+learning_flutter/
+├── lib/                          # Main application code
+│   ├── features/                 # Feature-based organization
+│   │   └── homeworks/           # Homework assignments and exercises
+│   │       └── lesson_13/       # Custom Widgets and Layout
+│   │           ├── custom_box.dart
+│   │           ├── homework_13_screen.dart
+│   │           └── README.md
+│   └── main.dart                # Application entry point
+├── android/                     # Android platform-specific code
+│   ├── app/
+│   │   ├── build.gradle.kts
+│   │   └── src/
+│   │       ├── debug/
+│   │       ├── main/
+│   │       │   ├── java/
+│   │       │   ├── kotlin/
+│   │       │   └── res/
+│   │       └── profile/
+│   ├── build.gradle.kts
+│   ├── gradle/
+│   ├── gradle.properties
+│   └── settings.gradle.kts
+├── ios/                        # iOS platform-specific code
+│   ├── Flutter/
+│   ├── Runner/
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets/
+│   │   ├── Base.lproj/
+│   │   ├── Info.plist
+│   │   └── Runner-Bridging-Header.h
+│   ├── Runner.xcodeproj/
+│   ├── Runner.xcworkspace/
+│   └── RunnerTests/
+├── linux/                      # Linux platform-specific code
+│   ├── CMakeLists.txt
+│   ├── flutter/
+│   └── runner/
+├── macos/                      # macOS platform-specific code
+│   ├── Flutter/
+│   ├── Runner/
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets/
+│   │   ├── Base.lproj/
+│   │   ├── Configs/
+│   │   ├── Info.plist
+│   │   └── MainFlutterWindow.swift
+│   ├── Runner.xcodeproj/
+│   ├── Runner.xcworkspace/
+│   └── RunnerTests/
+├── web/                        # Web platform-specific code
+│   ├── favicon.png
+│   ├── icons/
+│   ├── index.html
+│   └── manifest.json
+├── windows/                    # Windows platform-specific code
+│   ├── CMakeLists.txt
+│   ├── flutter/
+│   └── runner/
+├── test/                       # Unit and widget tests
+│   └── widget_test.dart
+├── analysis_options.yaml       # Flutter analysis configuration
+├── pubspec.yaml               # Project dependencies
+├── pubspec.lock              # Locked dependency versions
+├── CHANGELOG.md              # Project changelog
+└── README.md                 # This file
+```
 
 ## Getting Started
 
