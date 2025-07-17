@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/features/homeworks/lesson_13/homework_13_screen.dart';
+import 'package:learning_flutter/features/homeworks/lesson_14/homework_14_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: MyHomePage(),
-      routes: {'/lesson_13': (context) => const Lesson13()},
+      routes: {
+        '/lesson_13': (context) => const Lesson13(),
+        '/lesson_14': (context) => const Lesson14(),
+      },
     );
   }
 }
@@ -40,6 +44,12 @@ class MyHomePage extends StatelessWidget {
               child: const Text('Lesson 13'),
               onPressed: () {
                 Navigator.pushNamed(context, '/lesson_13');
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Lesson 14'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/lesson_14');
               },
             ),
           ],

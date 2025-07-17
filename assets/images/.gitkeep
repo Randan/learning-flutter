@@ -1,0 +1,2 @@
+# This file ensures the assets/images directory is tracked by git
+# Flutter requires asset directories to exist and contain at least one file 
