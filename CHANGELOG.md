@@ -5,6 +5,41 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- Lesson 14: Rating System Implementation
+  - Comprehensive store visit rating system
+  - 5-star overall rating with interactive star icons
+  - Department-specific ratings for service and assortment
+  - Like/Dislike rating system with custom SVG icons
+  - Dynamic feedback text fields that appear based on user interaction
+  - Modern UI design with glassmorphism effects and shadows
+  - JSON serialization for data persistence and transmission
+  - StatefulWidget implementation for complex state management
+  - Modular component architecture with reusable widgets
+- Rating Screen (`homework_14_screen.dart`)
+  - Glassmorphism AppBar with blur effects
+  - Interactive 5-star rating system
+  - Department rating cards with like/dislike options
+  - Global feedback section with text input
+  - Success notification with SnackBar
+  - Responsive layout with proper spacing and shadows
+- Rating Card Component (`rating_card.dart`)
+  - Reusable department rating interface
+  - Like/Dislike buttons for service and assortment evaluation
+  - Conditional feedback text field rendering
+  - Modern card design with rounded corners and shadows
+  - Proper state management and callback handling
+- Data Models (`models.dart`)
+  - `Department` class with service, assortment, and feedback properties
+  - `RatingState` class for managing overall application state
+  - JSON serialization and deserialization support
+  - CopyWith method for immutable state updates
+  - Factory constructors for data conversion
+- Custom Icons (`icons.dart`)
+  - `RatingStarIcon` for 5-star rating system with selection states
+  - `LikeIcon` and `DislikeIcon` for department ratings
+  - SVG-based icons with customizable colors and semantic labels
+  - Proper accessibility support with ARIA labels
+  - Shadow effects for selected rating stars
 - Lesson 13: Custom Widgets and Layout Management
   - Custom container widget with configurable properties
   - Different text alignment options (topLeft, center, bottomRight)
@@ -69,9 +104,15 @@ This document tracks the learning progress and changes made during the Flutter l
 - Learned about gesture detection and user interaction
 - Practiced state management with StatefulWidget
 - **Lesson 13**: Mastered custom widgets, layout management, and UI composition
+- **Lesson 14**: Implemented complex rating system with modern UI design
 - Configured development environment with proper project structure
 - Learned about navigation and routing in Flutter
 - Explored platform-specific configurations
+- Advanced state management with multiple related variables
+- JSON serialization for data persistence
+- Modern UI patterns including glassmorphism and conditional rendering
+- SVG icon integration and customization
+- Modular component architecture and reusable widgets
 
 ## [1.0.0] - Initial Setup
 

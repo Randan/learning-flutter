@@ -17,9 +17,15 @@ learning_flutter/
 ├── lib/                          # Main application code
 │   ├── features/                 # Feature-based organization
 │   │   └── homeworks/           # Homework assignments and exercises
-│   │       └── lesson_13/       # Custom Widgets and Layout
-│   │           ├── custom_box.dart
-│   │           ├── homework_13_screen.dart
+│   │       ├── lesson_13/       # Custom Widgets and Layout
+│   │       │   ├── custom_box.dart
+│   │       │   ├── homework_13_screen.dart
+│   │       │   └── README.md
+│   │       └── lesson_14/       # Rating System Implementation
+│   │           ├── homework_14_screen.dart
+│   │           ├── rating_card.dart
+│   │           ├── models.dart
+│   │           ├── icons.dart
 │   │           └── README.md
 │   └── main.dart                # Application entry point
 ├── android/                     # Android platform-specific code
@@ -104,6 +110,12 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **Rating Systems**: Implemented comprehensive rating system with 5-star and like/dislike options
+- **Complex State Management**: Managed multiple related state variables across different components
+- **JSON Serialization**: Converted objects to/from JSON format for data persistence
+- **Modern UI Design**: Implemented glassmorphism effects, shadows, and conditional rendering
+- **SVG Icon Integration**: Created custom SVG icons with proper color customization
+- **Modular Architecture**: Built reusable components with clean separation of concerns
 - **Custom Widgets**: Created reusable custom widgets with proper parameter passing
 - **Layout Management**: Learned about Column, Row, and Container widgets for responsive layouts
 - **Widget Alignment**: Explored different alignment options for positioning content within containers
