@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learning_flutter/router/screen_names.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -21,13 +22,13 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
               child: const Text('Lesson 13: Widgets pt.1'),
               onPressed: () {
-                context.go('/lesson_13');
+                context.goNamed(ScreenNames.lesson_13.name);
               },
             ),
             ElevatedButton(
               child: const Text('Lesson 14: Widgets pt.2'),
               onPressed: () {
-                context.go('/lesson_14');
+                context.goNamed(ScreenNames.lesson_14.name);
               },
             ),
             Text('Lesson 15: Widgets composition (w/o h/w)'),
