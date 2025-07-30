@@ -1,7 +1,7 @@
 import 'package:learning_flutter/features/homeworks/lesson_14/rating_card.dart';
 
 class Department {
-  Department({
+  const Department({
     required this.name,
     this.service,
     this.assortment,
@@ -20,10 +20,25 @@ class Department {
       feedback: json['feedback'] as String? ?? '',
     );
   }
+
   final String name;
-  LikeRate? service;
-  LikeRate? assortment;
-  String feedback;
+  final LikeRate? service;
+  final LikeRate? assortment;
+  final String feedback;
+
+  Department copyWith({
+    String? name,
+    LikeRate? service,
+    LikeRate? assortment,
+    String? feedback,
+  }) {
+    return Department(
+      name: name ?? this.name,
+      service: service ?? this.service,
+      assortment: assortment ?? this.assortment,
+      feedback: feedback ?? this.feedback,
+    );
+  }
 
   Map<String, dynamic> toJson() {
     return {
@@ -36,7 +51,7 @@ class Department {
 }
 
 class RatingState {
-  RatingState({
+  const RatingState({
     required this.departments,
     this.rating = 0,
     this.globalFeedback = '',
@@ -51,9 +66,10 @@ class RatingState {
           .toList(),
     );
   }
-  int rating;
-  String globalFeedback;
-  List<Department> departments;
+
+  final int rating;
+  final String globalFeedback;
+  final List<Department> departments;
 
   Map<String, dynamic> toJson() {
     return {

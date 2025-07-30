@@ -10,11 +10,11 @@ final appRouter = GoRouter(
       builder: (context, state) => const MyHomePage(),
       routes: <RouteBase>[
         GoRoute(
-          path: '/lesson_13',
+          path: 'lesson_13',
           builder: (context, state) => const Lesson13(),
         ),
         GoRoute(
-          path: '/lesson_14',
+          path: 'lesson_14',
           builder: (context, state) => const Lesson14(),
         ),
       ],
