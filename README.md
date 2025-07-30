@@ -27,6 +27,9 @@ learning_flutter/
 │   │           ├── models.dart
 │   │           ├── icons.dart
 │   │           └── README.md
+│   ├── router/                  # Navigation and routing
+│   │   └── app_router.dart      # GoRouter configuration
+│   ├── home_page.dart           # Main home page with lesson navigation
 │   └── main.dart                # Application entry point
 ├── android/                     # Android platform-specific code
 │   ├── app/
@@ -96,6 +99,14 @@ To run this project:
 3. Run `flutter pub get` to install dependencies
 4. Execute the application with `flutter run`
 
+## Dependencies
+
+The project uses the following key dependencies:
+
+- **go_router**: ^16.0.0 - Advanced routing and navigation
+- **flutter_svg**: ^2.2.0 - SVG image support
+- **cupertino_icons**: ^1.0.8 - iOS-style icons
+
 ## Learning Progress
 
 This repository tracks my progress through the Flutter framework, covering:
@@ -104,12 +115,16 @@ This repository tracks my progress through the Flutter framework, covering:
 - Layout widgets (Container, Column, Row, etc.)
 - Custom widget creation
 - State management
-- Navigation and routing
+- Navigation and routing with GoRouter
 - Platform-specific configurations
 - And more...
 
 ## Recent Learning Topics
 
+- **Advanced Navigation**: Implemented GoRouter for declarative routing
+- **Modern Routing**: Replaced traditional Navigator with GoRouter for better navigation management
+- **Route Configuration**: Centralized routing configuration in app_router.dart
+- **Navigation Patterns**: Learned about nested routes and route-based navigation
 - **Rating Systems**: Implemented comprehensive rating system with 5-star and like/dislike options
 - **Complex State Management**: Managed multiple related state variables across different components
 - **JSON Serialization**: Converted objects to/from JSON format for data persistence
