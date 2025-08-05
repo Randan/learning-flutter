@@ -1,5 +1,4 @@
 // ignore_for_file: inference_failure_on_function_return_type
-
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/features/homeworks/lesson_14/icons.dart';
 import 'package:learning_flutter/features/homeworks/lesson_14/models.dart';
@@ -47,7 +46,6 @@ class RatingCard extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-              // textAlign: TextAlign.left,
             ),
           ),
           _RatingItem(
@@ -152,7 +150,6 @@ class _RatingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      // elevation: !isSelected ? 1 : 0,
       borderRadius: BorderRadius.circular(100),
       child: IconButton(
         onPressed: onPressed,

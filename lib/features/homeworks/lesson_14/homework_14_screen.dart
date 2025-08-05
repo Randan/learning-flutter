@@ -29,31 +29,49 @@ class _Lesson14State extends State<Lesson14> {
 
   void _updateDepartmentService(int index, LikeRate? service) {
     setState(() {
-      _ratingState.departments[index].service = service;
+      final updatedDepartments = List<Department>.from(
+        _ratingState.departments,
+      );
+      updatedDepartments[index] = updatedDepartments[index].copyWith(
+        service: service,
+      );
+      _ratingState = _ratingState.copyWith(departments: updatedDepartments);
     });
   }
 
   void _updateDepartmentAssortment(int index, LikeRate? assortment) {
     setState(() {
-      _ratingState.departments[index].assortment = assortment;
+      final updatedDepartments = List<Department>.from(
+        _ratingState.departments,
+      );
+      updatedDepartments[index] = updatedDepartments[index].copyWith(
+        assortment: assortment,
+      );
+      _ratingState = _ratingState.copyWith(departments: updatedDepartments);
     });
   }
 
   void _updateDepartmentFeedback(int index, String feedback) {
     setState(() {
-      _ratingState.departments[index].feedback = feedback;
+      final updatedDepartments = List<Department>.from(
+        _ratingState.departments,
+      );
+      updatedDepartments[index] = updatedDepartments[index].copyWith(
+        feedback: feedback,
+      );
+      _ratingState = _ratingState.copyWith(departments: updatedDepartments);
     });
   }
 
   void _updateGlobalFeedback(String feedback) {
     setState(() {
-      _ratingState.globalFeedback = feedback;
+      _ratingState = _ratingState.copyWith(globalFeedback: feedback);
     });
   }
 
   void _updateRating(int rating) {
     setState(() {
-      _ratingState.rating = rating;
+      _ratingState = _ratingState.copyWith(rating: rating);
     });
   }
 
@@ -200,10 +218,8 @@ class _Lesson14State extends State<Lesson14> {
           ),
           child: ElevatedButton(
             onPressed: () {
-              // Тут можна додати логіку для відправки даних
-              print('Rating State: ${_ratingState.toJson()}');
+              debugPrint('Rating State: ${_ratingState.toJson()}');
 
-              // Показуємо повідомлення користувачу
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Дані успішно відправлено!'),

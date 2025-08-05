@@ -5,6 +5,31 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **Advanced Navigation System**: Implemented GoRouter for modern routing
+  - Replaced traditional Navigator with GoRouter for declarative routing
+  - Centralized route configuration in `app_router.dart`
+  - Nested route structure for better navigation management
+  - Route-based navigation with proper path handling
+  - Updated MaterialApp to use MaterialApp.router with routerConfig
+- **Router Configuration** (`router/app_router.dart`)
+  - GoRouter setup with nested route structure
+  - Route definitions for home page and lesson screens
+  - Proper import handling for all lesson components
+  - Clean separation of routing logic from UI components
+- **Updated Main Application** (`main.dart`)
+  - MaterialApp.router configuration with routerConfig
+  - Deep orange color scheme for modern appearance
+  - Disabled debug banner for cleaner UI
+  - Proper router integration with app structure
+- **Enhanced Home Page** (`home_page.dart`)
+  - Updated navigation using GoRouter context.go() method
+  - Modern AppBar with theme-based styling
+  - Clear lesson navigation buttons with proper routing
+  - Improved UI layout with better spacing and typography
+- **Dependencies Update**
+  - Added go_router: ^16.0.0 for advanced navigation
+  - Maintained flutter_svg: ^2.2.0 for SVG support
+  - Updated cupertino_icons: ^1.0.8 for latest icon support
 - Lesson 14: Rating System Implementation
   - Comprehensive store visit rating system
   - 5-star overall rating with interactive star icons
@@ -50,7 +75,7 @@ This document tracks the learning progress and changes made during the Flutter l
   - Padding and margin management
   - Color customization for multiple containers
   - StatefulWidget implementation for dynamic UI updates
-  - Navigation between screens using named routes
+  - Navigation between screens using GoRouter
 - Custom Box Widget (`custom_box.dart`)
   - Reusable widget with color, onTap, and textAlignment parameters
   - Proper widget composition with GestureDetector
@@ -65,13 +90,9 @@ This document tracks the learning progress and changes made during the Flutter l
   - Dynamic container expansion based on selection
   - Proper spacing and alignment management
   - Interactive UI with visual feedback
-- Main Application (`main.dart`)
-  - MaterialApp configuration with theme setup
-  - Named route navigation system
-  - Home page with lesson navigation buttons
-  - Deep purple color scheme
 - Project Structure
   - Feature-based organization in `lib/features/homeworks/`
+  - Router configuration in dedicated `lib/router/` directory
   - Lesson-specific folders for better code organization
   - Platform-specific configurations (Android, iOS, Web)
   - Test directory for unit and widget tests
@@ -79,9 +100,15 @@ This document tracks the learning progress and changes made during the Flutter l
 - Analysis options for code quality and linting
 
 ### Changed
+- **Navigation System**: Migrated from traditional Navigator to GoRouter
+  - Replaced MaterialApp with MaterialApp.router
+  - Updated navigation calls from Navigator.pushNamed to context.go()
+  - Centralized routing configuration for better maintainability
+  - Improved route structure with nested routes
 - **Code Organization**: Implemented feature-based folder structure
   - Organized code into logical feature modules
   - Separated homework assignments by lesson
+  - Added dedicated router directory for navigation logic
   - Improved code maintainability and scalability
 - **Widget Architecture**: Created reusable custom widgets
   - Extracted common UI patterns into separate components
@@ -91,10 +118,10 @@ This document tracks the learning progress and changes made during the Flutter l
   - Added proper spacing between UI elements
   - Implemented flexible layout with Expanded widgets
   - Enhanced visual hierarchy and user experience
-- **Navigation System**: Implemented named route navigation
-  - Added route configuration in MaterialApp
-  - Created navigation buttons for lesson access
-  - Improved app navigation structure
+- **Theme Configuration**: Updated to deep orange color scheme
+  - Modern color palette for better visual appeal
+  - Consistent theming across the application
+  - Improved user interface aesthetics
 
 ### Learning Progress
 - Started Flutter framework fundamentals
@@ -105,14 +132,16 @@ This document tracks the learning progress and changes made during the Flutter l
 - Practiced state management with StatefulWidget
 - **Lesson 13**: Mastered custom widgets, layout management, and UI composition
 - **Lesson 14**: Implemented complex rating system with modern UI design
+- **Navigation**: Learned advanced routing with GoRouter
 - Configured development environment with proper project structure
-- Learned about navigation and routing in Flutter
+- Learned about navigation and routing in Flutter with modern patterns
 - Explored platform-specific configurations
 - Advanced state management with multiple related variables
 - JSON serialization for data persistence
 - Modern UI patterns including glassmorphism and conditional rendering
 - SVG icon integration and customization
 - Modular component architecture and reusable widgets
+- Declarative routing patterns and route configuration
 
 ## [1.0.0] - Initial Setup
 
