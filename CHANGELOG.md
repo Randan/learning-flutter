@@ -5,6 +5,37 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **Lesson 19: State Management with Bloc and Cubit Patterns**
+  - Implemented Bloc pattern for advanced state management
+  - Created Cubit pattern for simpler state management
+  - Counter application demonstrating both patterns
+  - Real-time state synchronization across UI components
+  - MultiBlocProvider setup for global state access
+- **Bloc Implementation** (`lesson_19/bloc_task/`)
+  - `CounterBloc` class with event-driven state management
+  - `CounterEvent` classes for increment, decrement, and reset actions
+  - `CounterState` class with immutable state representation
+  - `BlocCounterScreen` with interactive counter UI
+  - Event handling with proper state emission
+- **Cubit Implementation** (`lesson_19/cubit_task/`)
+  - `CounterCubit` class with method-based state management
+  - `CounterCubitState` class for state representation
+  - `CubitCounterScreen` with counter interface
+  - Direct method calls for state updates
+  - Simplified state management compared to Bloc
+- **Enhanced Navigation System**
+  - Added new routes for Lesson 19 Bloc and Cubit screens
+  - Updated `ScreenNames` enum with lesson19Bloc and lesson19Cubit
+  - Extended `app_router.dart` with new route configurations
+  - Updated home page with counter display buttons
+- **State Management Integration**
+  - MultiBlocProvider setup in `main.dart`
+  - Global Bloc and Cubit instances for app-wide access
+  - Real-time counter display in home page navigation buttons
+  - Proper state watching with context.watch()
+- **Dependencies Update**
+  - Added flutter_bloc: ^8.1.4 for state management
+  - Maintained existing dependencies for navigation and UI
 - **Advanced Navigation System**: Implemented GoRouter for modern routing
   - Replaced traditional Navigator with GoRouter for declarative routing
   - Centralized route configuration in `app_router.dart`
@@ -100,6 +131,17 @@ This document tracks the learning progress and changes made during the Flutter l
 - Analysis options for code quality and linting
 
 ### Changed
+- **State Management Architecture**: Implemented Bloc and Cubit patterns
+  - Added flutter_bloc dependency for advanced state management
+  - Replaced simple state management with Bloc pattern
+  - Implemented event-driven architecture for complex state changes
+  - Added Cubit pattern for simpler state management scenarios
+  - Global state access through MultiBlocProvider
+- **Home Page Integration**: Enhanced with real-time state display
+  - Added counter display in navigation buttons
+  - Real-time state synchronization with Bloc and Cubit
+  - Dynamic button text showing current counter values
+  - Improved user experience with live state feedback
 - **Navigation System**: Migrated from traditional Navigator to GoRouter
   - Replaced MaterialApp with MaterialApp.router
   - Updated navigation calls from Navigator.pushNamed to context.go()
@@ -132,6 +174,12 @@ This document tracks the learning progress and changes made during the Flutter l
 - Practiced state management with StatefulWidget
 - **Lesson 13**: Mastered custom widgets, layout management, and UI composition
 - **Lesson 14**: Implemented complex rating system with modern UI design
+- **Lesson 19**: Learned advanced state management with Bloc and Cubit patterns
+  - Understanding of Bloc pattern with events, states, and business logic
+  - Cubit pattern for simpler state management scenarios
+  - Event-driven architecture and state synchronization
+  - Global state management with MultiBlocProvider
+  - Real-time UI updates based on state changes
 - **Navigation**: Learned advanced routing with GoRouter
 - Configured development environment with proper project structure
 - Learned about navigation and routing in Flutter with modern patterns
@@ -142,6 +190,9 @@ This document tracks the learning progress and changes made during the Flutter l
 - SVG icon integration and customization
 - Modular component architecture and reusable widgets
 - Declarative routing patterns and route configuration
+- Bloc pattern implementation and event-driven architecture
+- Cubit pattern for simplified state management
+- Global state access and real-time synchronization
 
 ## [1.0.0] - Initial Setup
 
