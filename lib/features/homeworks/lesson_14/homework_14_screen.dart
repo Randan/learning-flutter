@@ -218,10 +218,8 @@ class _Lesson14State extends State<Lesson14> {
           ),
           child: ElevatedButton(
             onPressed: () {
-              // Тут можна додати логіку для відправки даних
               debugPrint('Rating State: ${_ratingState.toJson()}');
 
-              // Показуємо повідомлення користувачу
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Дані успішно відправлено!'),
