@@ -19,12 +19,10 @@ class BlocCounterScreen extends StatelessWidget {
           spacing: 20,
           children: [
             BlocBuilder<CounterBloc, CounterState>(
-              builder: (context, state) {
-                return Text(
-                  state.counter.toString(),
-                  style: const TextStyle(fontSize: 20),
-                );
-              },
+              builder: (context, state) => Text(
+                state.counter.toString(),
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

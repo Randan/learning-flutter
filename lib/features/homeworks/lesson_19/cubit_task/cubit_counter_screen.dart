@@ -8,6 +8,8 @@ class CubitCounterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final counterCubit = context.read<CounterCubit>();
+
     return Scaffold(
       appBar: AppBar(title: const Text('Cubit Counter')),
       body: Center(
@@ -16,27 +18,25 @@ class CubitCounterScreen extends StatelessWidget {
           spacing: 20,
           children: [
             BlocBuilder<CounterCubit, CounterCubitState>(
-              builder: (context, state) {
-                return Text(
-                  state.counter.toString(),
-                  style: const TextStyle(fontSize: 20),
-                );
-              },
+              builder: (context, state) => Text(
+                state.counter.toString(),
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 20,
               children: [
                 ElevatedButton(
-                  onPressed: () => context.read<CounterCubit>().decrement(),
+                  onPressed: counterCubit.decrement,
                   child: const Text('-'),
                 ),
                 ElevatedButton(
-                  onPressed: () => context.read<CounterCubit>().reset(),
+                  onPressed: counterCubit.reset,
                   child: const Text('Reset'),
                 ),
                 ElevatedButton(
-                  onPressed: () => context.read<CounterCubit>().increment(),
+                  onPressed: counterCubit.increment,
                   child: const Text('+'),
                 ),
               ],
