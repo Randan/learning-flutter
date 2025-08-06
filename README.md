@@ -21,14 +21,27 @@ learning_flutter/
 │   │       │   ├── custom_box.dart
 │   │       │   ├── homework_13_screen.dart
 │   │       │   └── README.md
-│   │       └── lesson_14/       # Rating System Implementation
-│   │           ├── homework_14_screen.dart
-│   │           ├── rating_card.dart
-│   │           ├── models.dart
-│   │           ├── icons.dart
-│   │           └── README.md
+│   │       ├── lesson_14/       # Rating System Implementation
+│   │       │   ├── homework_14_screen.dart
+│   │       │   ├── rating_card.dart
+│   │       │   ├── models.dart
+│   │       │   ├── icons.dart
+│   │       │   └── README.md
+│   │       └── lesson_19/       # State Management with Bloc and Cubit
+│   │           ├── bloc_task/   # Bloc implementation
+│   │           │   ├── bloc_counter_screen.dart
+│   │           │   └── bloc/
+│   │           │       ├── counter_bloc.dart
+│   │           │       ├── counter_event.dart
+│   │           │       └── counter_state.dart
+│   │           └── cubit_task/  # Cubit implementation
+│   │               ├── cubit_counter_screen.dart
+│   │               └── cubit/
+│   │                   ├── counter_cubit.dart
+│   │                   └── counter_state.dart
 │   ├── router/                  # Navigation and routing
-│   │   └── app_router.dart      # GoRouter configuration
+│   │   ├── app_router.dart      # GoRouter configuration
+│   │   └── screen_names.dart    # Route name definitions
 │   ├── home_page.dart           # Main home page with lesson navigation
 │   └── main.dart                # Application entry point
 ├── android/                     # Android platform-specific code
@@ -104,6 +117,7 @@ To run this project:
 The project uses the following key dependencies:
 
 - **go_router**: ^16.0.0 - Advanced routing and navigation
+- **flutter_bloc**: ^8.1.4 - State management with Bloc pattern
 - **flutter_svg**: ^2.2.0 - SVG image support
 - **cupertino_icons**: ^1.0.8 - iOS-style icons
 
@@ -114,13 +128,18 @@ This repository tracks my progress through the Flutter framework, covering:
 - Widget basics and composition
 - Layout widgets (Container, Column, Row, etc.)
 - Custom widget creation
-- State management
+- State management with Bloc and Cubit patterns
 - Navigation and routing with GoRouter
 - Platform-specific configurations
 - And more...
 
 ## Recent Learning Topics
 
+- **State Management with Bloc Pattern**: Implemented Bloc and Cubit for counter management
+  - Bloc implementation with events, states, and business logic
+  - Cubit implementation for simpler state management
+  - MultiBlocProvider setup for global state access
+  - Real-time state synchronization across UI components
 - **Advanced Navigation**: Implemented GoRouter for declarative routing
 - **Modern Routing**: Replaced traditional Navigator with GoRouter for better navigation management
 - **Route Configuration**: Centralized routing configuration in app_router.dart
