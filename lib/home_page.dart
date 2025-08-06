@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learning_flutter/features/homeworks/lesson_19/bloc_task/bloc/counter_bloc.dart';
+import 'package:learning_flutter/features/homeworks/lesson_19/bloc_task/bloc/counter_state.dart';
 import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit/counter_cubit.dart';
+import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit/counter_state.dart';
 import 'package:learning_flutter/router/screen_names.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -10,9 +12,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final counterCubit = context.watch<CounterCubit>().state.counter;
-    final counterBloc = context.watch<CounterBloc>().state.counter;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -44,16 +43,24 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 10,
               children: [
-                ElevatedButton(
-                  child: Text('Lesson 19: Cubit ($counterCubit)'),
-                  onPressed: () {
-                    context.goNamed(ScreenNames.lesson19Cubit.name);
+                BlocBuilder<CounterCubit, CounterCubitState>(
+                  builder: (context, state) {
+                    return ElevatedButton(
+                      child: Text('Lesson 19: Cubit (${state.counter})'),
+                      onPressed: () {
+                        context.goNamed(ScreenNames.lesson19Cubit.name);
+                      },
+                    );
                   },
                 ),
-                ElevatedButton(
-                  child: Text('Lesson 19: Bloc ($counterBloc)'),
-                  onPressed: () {
-                    context.goNamed(ScreenNames.lesson19Bloc.name);
+                BlocBuilder<CounterBloc, CounterState>(
+                  builder: (context, state) {
+                    return ElevatedButton(
+                      child: Text('Lesson 19: Bloc (${state.counter})'),
+                      onPressed: () {
+                        context.goNamed(ScreenNames.lesson19Bloc.name);
+                      },
+                    );
                   },
                 ),
               ],
