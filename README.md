@@ -39,6 +39,19 @@ learning_flutter/
 │   │               └── cubit/
 │   │                   ├── counter_cubit.dart
 │   │                   └── counter_state.dart
+│   │       └── lesson_20/       # Rate App with BLoC Architecture
+│   │           ├── bloc/        # BLoC implementation
+│   │           │   ├── rate_app_bloc.dart
+│   │           │   ├── rate_app_event.dart
+│   │           │   ├── rate_app_state.dart
+│   │           │   └── constants.dart
+│   │           └── presentation/
+│   │               └── screens/
+│   │                   ├── rate_app_bloc_screen.dart
+│   │                   └── rate_app_cubit_screen.dart
+│   ├── widgets/                 # Global reusable widgets
+│   │   ├── custom_snackbar.dart # Custom snackbar with 4 states
+│   │   └── widgets.dart         # Widget exports
 │   ├── router/                  # Navigation and routing
 │   │   ├── app_router.dart      # GoRouter configuration
 │   │   └── screen_names.dart    # Route name definitions
@@ -135,6 +148,22 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **BLoC Architecture Implementation**: Built comprehensive rate app with proper BLoC pattern
+  - Event-driven architecture with RateAppEvent classes
+  - State management with automatic isDirty calculation
+  - Private _rateCached field with controlled updates
+  - Proper async event handling with await patterns
+  - Context safety checks before UI operations
+- **Global Widget System**: Created reusable custom snackbar widget
+  - 4-state snackbar (success, warning, error, info) with appropriate colors and icons
+  - Global accessibility throughout the application
+  - Material Design compliance with floating behavior
+  - Customizable duration and action buttons
+- **Advanced State Management**: Implemented sophisticated state logic
+  - Automatic isDirty calculation based on rate vs rateCached comparison
+  - Private fields with controlled access through getters
+  - State immutability with proper copyWith methods
+  - Submit rating workflow with state updates
 - **State Management with Bloc Pattern**: Implemented Bloc and Cubit for counter management
   - Bloc implementation with events, states, and business logic
   - Cubit implementation for simpler state management

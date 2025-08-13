@@ -60,6 +60,24 @@ class MyHomePage extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 10,
+            children: [
+              ElevatedButton(
+                child: const Text('L 20: Rate App Cubit'),
+                onPressed: () {
+                  context.goNamed(ScreenNames.lesson20Cubit.name);
+                },
+              ),
+              ElevatedButton(
+                child: const Text('L 20: Rate App BLoC'),
+                onPressed: () {
+                  context.goNamed(ScreenNames.lesson20Bloc.name);
+                },
+              ),
+            ],
+          ),
         ],
       ),
     ),
