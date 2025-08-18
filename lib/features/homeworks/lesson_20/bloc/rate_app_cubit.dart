@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:learning_flutter/features/homeworks/lesson_20/bloc/constants.dart';
 import 'package:learning_flutter/features/homeworks/lesson_20/bloc/rate_app_state.dart';
-import 'package:learning_flutter/widgets/custom_snackbar.dart';
 
 class RateAppCubit extends Cubit<RateAppState> {
   RateAppCubit()
@@ -17,21 +14,15 @@ class RateAppCubit extends Cubit<RateAppState> {
     emit(state.copyWith(rate: 0, status: RateAppStateStatus.initial));
   }
 
-  void sendRate(BuildContext context) {
+  void resetStatus() {
+    emit(state.resetStatus());
+  }
+
+  Future<void> sendRate() async {
     emit(state.copyWith(status: RateAppStateStatus.loading));
 
-    Future.delayed(const Duration(milliseconds: 500), () {
-      emit(state.copyWith(status: RateAppStateStatus.success).submitRating());
+    await Future.delayed(const Duration(milliseconds: 500), () {});
 
-      if (context.mounted) {
-        CustomSnackBar.show(
-          context: context,
-          message: 'Дякуємо за оцінку! Ваша оцінка: ${state.rate}/$maxRate',
-          type: SnackBarType.success,
-        );
-
-        context.pop();
-      }
-    });
+    emit(state.copyWith(status: RateAppStateStatus.success));
   }
 }

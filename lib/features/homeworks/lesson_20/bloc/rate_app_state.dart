@@ -1,38 +1,18 @@
 import 'package:learning_flutter/features/homeworks/lesson_20/bloc/constants.dart';
 
 class RateAppState {
-  RateAppState({required this.rate, required this.status})
-    : _rateCached = rate,
-      _isDirty = false;
-
-  RateAppState._internal({
-    required this.rate,
-    required this.status,
-    required int rateCached,
-  }) : _rateCached = rateCached,
-       _isDirty = rate != rateCached;
+  const RateAppState({required this.rate, required this.status});
 
   final int rate;
   final RateAppStateStatus status;
-  final int _rateCached;
-  final bool _isDirty;
 
-  bool get isDirtyState => _isDirty;
-
-  RateAppState _updateCachedRating() {
-    return RateAppState._internal(rate: rate, status: status, rateCached: rate);
-  }
+  bool get isDirtyState => rate > 0;
 
   RateAppState copyWith({int? rate, RateAppStateStatus? status}) {
-    final newRate = rate ?? this.rate;
-    return RateAppState._internal(
-      rate: newRate,
-      status: status ?? this.status,
-      rateCached: _rateCached,
-    );
+    return RateAppState(rate: rate ?? this.rate, status: status ?? this.status);
   }
 
-  RateAppState submitRating() {
-    return _updateCachedRating();
+  RateAppState resetStatus() {
+    return copyWith(status: RateAppStateStatus.initial);
   }
 }
