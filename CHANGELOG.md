@@ -5,6 +5,26 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **Lesson 20: Rate App with BLoC Architecture**
+  - Comprehensive rating application with proper BLoC pattern implementation
+  - Event-driven architecture with RateAppEvent classes
+  - Advanced state management with automatic isDirty calculation
+  - Private _rateCached field with controlled updates through submitRating()
+  - Proper async event handling with await patterns and context safety
+  - Context safety checks before UI operations to prevent deactivated widget errors
+  - State immutability with proper copyWith methods and internal constructors
+  - Submit rating workflow with automatic state updates and navigation
+- **Global Widget System**
+  - CustomSnackBar widget with 4 states (success, warning, error, info)
+  - Global accessibility throughout the application via lib/widgets/ directory
+  - Material Design compliance with floating behavior and rounded corners
+  - Customizable duration, action buttons, and appropriate colors/icons for each state
+  - Barrel export system for easy importing across the application
+- **Advanced State Management Patterns**
+  - Automatic isDirty calculation based on rate vs rateCached comparison
+  - Private fields with controlled access through getters (isDirtyState, rateCached)
+  - State immutability with proper copyWith methods and submitRating workflow
+  - Context-aware operations with proper mounted checks
 - **Lesson 19: State Management with Bloc and Cubit Patterns**
   - Implemented Bloc pattern for advanced state management
   - Created Cubit pattern for simpler state management
@@ -131,6 +151,13 @@ This document tracks the learning progress and changes made during the Flutter l
 - Analysis options for code quality and linting
 
 ### Changed
+- **State Management Architecture**: Enhanced with advanced BLoC patterns and global widgets
+  - Migrated from Cubit to full BLoC implementation for Lesson 20
+  - Implemented proper async event handling with await patterns
+  - Added context safety checks to prevent deactivated widget errors
+  - Created global widget system for application-wide accessibility
+  - Enhanced state management with automatic isDirty calculation
+  - Improved state immutability and controlled field access
 - **State Management Architecture**: Implemented Bloc and Cubit patterns
   - Added flutter_bloc dependency for advanced state management
   - Replaced simple state management with Bloc pattern
@@ -181,6 +208,16 @@ This document tracks the learning progress and changes made during the Flutter l
   - Global state management with MultiBlocProvider
   - Real-time UI updates based on state changes
 - **Navigation**: Learned advanced routing with GoRouter
+- **Lesson 20**: Mastered advanced BLoC architecture and global widget systems
+  - Event-driven architecture with proper event classes and handlers
+  - Advanced state management with private fields and controlled access
+  - Async event handling with proper await patterns and context safety
+  - Global widget system creation and barrel export patterns
+  - Context-aware operations and deactivated widget error prevention
+- **Advanced State Management**: Implemented sophisticated state logic patterns
+  - Automatic state calculation and immutability principles
+  - Private field management with controlled update mechanisms
+  - State workflow implementation with proper lifecycle management
 - Configured development environment with proper project structure
 - Learned about navigation and routing in Flutter with modern patterns
 - Explored platform-specific configurations
