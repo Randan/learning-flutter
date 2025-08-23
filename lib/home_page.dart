@@ -78,6 +78,12 @@ class MyHomePage extends StatelessWidget {
               ),
             ],
           ),
+          ElevatedButton(
+            child: const Text('L 22: Animated Ball'),
+            onPressed: () {
+              context.goNamed(ScreenNames.lesson22.name);
+            },
+          ),
         ],
       ),
     ),

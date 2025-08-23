@@ -49,6 +49,9 @@ learning_flutter/
 │   │               └── screens/
 │   │                   ├── rate_app_bloc_screen.dart
 │   │                   └── rate_app_cubit_screen.dart
+│   │       └── lesson_22/       # Advanced Animation with AnimationController
+│   │           ├── homework_lesson_22.dart
+│   │           └── README.md
 │   ├── widgets/                 # Global reusable widgets
 │   │   ├── custom_snackbar.dart # Custom snackbar with 4 states
 │   │   └── widgets.dart         # Widget exports
@@ -148,6 +151,13 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **Advanced Animation with AnimationController**: Implemented complex multi-stage animation system
+  - Multi-controller animation architecture with position and rotation controllers
+  - Complex animation sequence: up movement, pause, down movement with bounce
+  - Continuous rotation throughout the entire animation duration
+  - Proper animation lifecycle management with TickerProviderStateMixin
+  - Gesture protection during animation execution
+  - Mathematical constants integration for precise rotation calculations
 - **BLoC Architecture Implementation**: Built comprehensive rate app with proper BLoC pattern
   - Event-driven architecture with RateAppEvent classes
   - State management with automatic isDirty calculation
