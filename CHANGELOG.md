@@ -5,6 +5,16 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **Lesson 22: Advanced Animation with AnimationController**
+  - Complex animation sequence with multiple AnimationController instances
+  - Position animation with easeOut and bounceOut curves for realistic ball movement
+  - Rotation animation with continuous spinning throughout the animation
+  - Multi-stage animation: ball goes up, waits, then comes down with bounce effect
+  - Proper lifecycle management with TickerProviderStateMixin
+  - Gesture detection with animation state protection (prevents multiple taps during animation)
+  - AnimatedBuilder with Listenable.merge for efficient animation updates
+  - Mathematical constants usage (pi) for rotation calculations
+  - Custom getter for animation state management (_isAnimating)
 - **Lesson 20: Rate App with BLoC Architecture**
   - Comprehensive rating application with proper BLoC pattern implementation
   - Event-driven architecture with RateAppEvent classes
