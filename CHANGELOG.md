@@ -5,6 +5,16 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **Lesson 23: Error Handling with BLoC Pattern**
+  - Comprehensive error handling system with custom error classes
+  - `CustomServerError` class for server-specific error handling
+  - Repository-level error conversion from generic exceptions to custom errors
+  - Specific error handling for `CustomServerError` vs general error handling in Cubit
+  - UI error display with retry functionality and different error themes
+  - Global BlocProvider setup in main.dart for application-wide state access
+  - Proper error state management with sealed classes and pattern matching
+  - Auto-loading profile functionality with error recovery
+  - Retry mechanism with "Спробувати знову" button for user interaction
 - **Lesson 22: Advanced Animation with AnimationController**
   - Complex animation sequence with multiple AnimationController instances
   - Position animation with easeOut and bounceOut curves for realistic ball movement
@@ -224,6 +234,13 @@ This document tracks the learning progress and changes made during the Flutter l
   - Async event handling with proper await patterns and context safety
   - Global widget system creation and barrel export patterns
   - Context-aware operations and deactivated widget error prevention
+- **Lesson 23**: Implemented comprehensive error handling with BLoC pattern
+  - Custom error class creation and exception handling
+  - Repository-level error conversion and custom error propagation
+  - Specific vs general error handling strategies in Cubit
+  - UI error display with retry functionality and user interaction
+  - Global state management setup and proper error state handling
+  - Pattern matching with sealed classes for type-safe error handling
 - **Advanced State Management**: Implemented sophisticated state logic patterns
   - Automatic state calculation and immutability principles
   - Private field management with controlled update mechanisms
