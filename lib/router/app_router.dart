@@ -6,6 +6,7 @@ import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit_c
 import 'package:learning_flutter/features/homeworks/lesson_20/presentation/screens/rate_app_bloc_screen.dart';
 import 'package:learning_flutter/features/homeworks/lesson_20/presentation/screens/rate_app_cubit_screen.dart';
 import 'package:learning_flutter/features/homeworks/lesson_22/homework_lesson_22.dart';
+import 'package:learning_flutter/features/homeworks/lesson_23/presentation/ui/screens/user_profile_homework_screen.dart';
 import 'package:learning_flutter/home_page.dart';
 import 'package:learning_flutter/router/screen_names.dart';
 
@@ -49,6 +50,11 @@ final appRouter = GoRouter(
           path: 'lesson_22',
           name: ScreenNames.lesson22.name,
           builder: (context, state) => const HomeworkLesson22(),
+        ),
+        GoRoute(
+          path: 'lesson_23',
+          name: ScreenNames.lesson23.name,
+          builder: (context, state) => const UserProfileHomeworkScreen(),
         ),
       ],
     ),

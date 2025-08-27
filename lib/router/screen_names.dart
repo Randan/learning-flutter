@@ -6,4 +6,5 @@ enum ScreenNames {
   lesson20Cubit,
   lesson20Bloc,
   lesson22,
+  lesson23,
 }

@@ -84,6 +84,12 @@ class MyHomePage extends StatelessWidget {
               context.goNamed(ScreenNames.lesson22.name);
             },
           ),
+          ElevatedButton(
+            child: const Text('L 23: Error Handling'),
+            onPressed: () {
+              context.goNamed(ScreenNames.lesson23.name);
+            },
+          ),
         ],
       ),
     ),

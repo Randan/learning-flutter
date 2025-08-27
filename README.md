@@ -52,6 +52,21 @@ learning_flutter/
 │   │       └── lesson_22/       # Advanced Animation with AnimationController
 │   │           ├── homework_lesson_22.dart
 │   │           └── README.md
+│   │       └── lesson_23/       # Error Handling with BLoC Pattern
+│   │           ├── data/
+│   │           │   └── repository/
+│   │           │       ├── entity/
+│   │           │       │   ├── user_entity.dart
+│   │           │       │   └── custom_server_error.dart
+│   │           │       └── fake_user_repository.dart
+│   │           ├── presentation/
+│   │           │   ├── cubit/
+│   │           │   │   ├── user_profile_cubit.dart
+│   │           │   │   └── user_profile_state.dart
+│   │           │   └── ui/
+│   │           │       └── screens/
+│   │           │           └── user_profile_homework_screen.dart
+│   │           └── README.md
 │   ├── widgets/                 # Global reusable widgets
 │   │   ├── custom_snackbar.dart # Custom snackbar with 4 states
 │   │   └── widgets.dart         # Widget exports
@@ -151,6 +166,13 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **Lesson 23: Error Handling with BLoC Pattern**: Implemented comprehensive error handling system
+  - Custom error class `CustomServerError` for server-specific error handling
+  - Repository-level error conversion from generic exceptions to custom errors
+  - Specific error handling for `CustomServerError` vs general error handling
+  - UI error display with retry functionality and different error themes
+  - Global BlocProvider setup in main.dart for application-wide state access
+  - Proper error state management with sealed classes and pattern matching
 - **Advanced Animation with AnimationController**: Implemented complex multi-stage animation system
   - Multi-controller animation architecture with position and rotation controllers
   - Complex animation sequence: up movement, pause, down movement with bounce
