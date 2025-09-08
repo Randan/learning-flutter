@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/features/custom_widgets/presentation/ui/widgets/custom_box.dart';
 
-class Lesson13 extends StatefulWidget {
-  const Lesson13({super.key});
+class CustomWidgetsScreen extends StatefulWidget {
+  const CustomWidgetsScreen({super.key});
 
   @override
-  State<Lesson13> createState() => _Lesson13State();
+  State<CustomWidgetsScreen> createState() => _CustomWidgetsScreenState();
 }
 
-class _Lesson13State extends State<Lesson13> {
+class _CustomWidgetsScreenState extends State<CustomWidgetsScreen> {
   int? _selectedIndex = 0;
 
   void _onTap(int index) {
@@ -27,7 +27,7 @@ class _Lesson13State extends State<Lesson13> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lesson 13')),
+      appBar: AppBar(title: const Text('Custom Widgets')),
       body: Center(
         child: Column(
           spacing: 10,

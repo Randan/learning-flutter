@@ -32,13 +32,13 @@ class MyHomePage extends StatelessWidget {
             FeatureCard(
               title: 'L 13: Widgets pt.1',
               onTap: () {
-                context.goNamed(ScreenNames.lesson13.name);
+                context.goNamed(ScreenNames.customWidgets.name);
               },
             ),
             FeatureCard(
               title: 'L 14: Widgets pt.2',
               onTap: () {
-                context.goNamed(ScreenNames.lesson14.name);
+                context.goNamed(ScreenNames.ratingSystem.name);
               },
             ),
             FeatureCard(title: 'L 15: Widgets composition', onTap: null),
@@ -48,7 +48,7 @@ class MyHomePage extends StatelessWidget {
               builder: (context, state) => FeatureCard(
                 title: 'L 19: Cubit (${state.counter})',
                 onTap: () {
-                  context.goNamed(ScreenNames.lesson19Cubit.name);
+                  context.goNamed(ScreenNames.counterCubit.name);
                 },
               ),
             ),
@@ -56,32 +56,38 @@ class MyHomePage extends StatelessWidget {
               builder: (context, state) => FeatureCard(
                 title: 'L 19: Bloc (${state.counter})',
                 onTap: () {
-                  context.goNamed(ScreenNames.lesson19Bloc.name);
+                  context.goNamed(ScreenNames.counterBloc.name);
                 },
               ),
             ),
             FeatureCard(
               title: 'L 20: Rate App Cubit',
               onTap: () {
-                context.goNamed(ScreenNames.lesson20Cubit.name);
+                context.goNamed(ScreenNames.rateAppCubit.name);
               },
             ),
             FeatureCard(
               title: 'L 20: Rate App BLoC',
               onTap: () {
-                context.goNamed(ScreenNames.lesson20Bloc.name);
+                context.goNamed(ScreenNames.rateAppBloc.name);
               },
             ),
             FeatureCard(
               title: 'L 22: Animated Ball',
               onTap: () {
-                context.goNamed(ScreenNames.lesson22.name);
+                context.goNamed(ScreenNames.animatedBall.name);
               },
             ),
             FeatureCard(
               title: 'L 23: Error Handling',
               onTap: () {
-                context.goNamed(ScreenNames.lesson23.name);
+                context.goNamed(ScreenNames.userProfile.name);
+              },
+            ),
+            FeatureCard(
+              title: 'L 26: Network API & DTO',
+              onTap: () {
+                context.goNamed(ScreenNames.networkApi.name);
               },
             ),
           ],

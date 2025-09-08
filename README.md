@@ -61,21 +61,37 @@ learning_flutter/
 │   │   │       └── ui/
 │   │   │           └── screens/
 │   │   │               └── animated_ball_screen.dart
-│   │   └── user_profile/         # Lesson 23: Error Handling with BLoC Pattern
+│   │   ├── user_profile/         # Lesson 23: Error Handling with BLoC Pattern
+│   │   │   ├── presentation/
+│   │   │   │   ├── bloc/
+│   │   │   │   │   ├── user_profile_cubit.dart
+│   │   │   │   │   └── user_profile_state.dart
+│   │   │   │   └── ui/
+│   │   │   │       └── screens/
+│   │   │   │           └── user_profile_homework_screen.dart
+│   │   │   └── data/
+│   │   │       ├── repositories/
+│   │   │       │   └── fake_user_repository.dart
+│   │   │       └── data_source/
+│   │   │           └── entities/
+│   │   │               ├── user_entity.dart
+│   │   │               └── custom_server_error.dart
+│   │   └── network_api/          # Lesson 26: Network API & DTO Integration
 │   │       ├── presentation/
-│   │       │   ├── bloc/
-│   │       │   │   ├── user_profile_cubit.dart
-│   │       │   │   └── user_profile_state.dart
-│   │       │   └── ui/
-│   │       │       └── screens/
-│   │       │           └── user_profile_homework_screen.dart
+│   │       │   └── screens/
+│   │       │       └── network_api_screen.dart
 │   │       └── data/
-│   │           ├── repositories/
-│   │           │   └── fake_user_repository.dart
-│   │           └── data_source/
-│   │               └── entities/
-│   │                   ├── user_entity.dart
-│   │                   └── custom_server_error.dart
+│   │           ├── data_source/
+│   │           │   └── cheque_remote_data_source.dart
+│   │           ├── dto/
+│   │           │   └── cheque_dto.dart
+│   │           ├── entity/
+│   │           │   └── cheque_entity.dart
+│   │           ├── encode_decode/
+│   │           │   ├── cheque_decoder.dart
+│   │           │   └── cheque_encoder.dart
+│   │           └── repositories/
+│   │               └── cheque_repository.dart
 │   ├── shared/                   # Shared components across features
 │   │   └── widgets/
 │   │       ├── custom_snackbar.dart # Custom snackbar with 4 states
@@ -188,6 +204,7 @@ The project uses the following key dependencies:
 
 - **go_router**: ^16.0.0 - Advanced routing and navigation
 - **flutter_bloc**: ^8.1.4 - State management with Bloc pattern
+- **http**: ^1.1.0 - HTTP requests for network API integration
 - **flutter_svg**: ^2.2.0 - SVG image support
 - **cupertino_icons**: ^1.0.8 - iOS-style icons
 
@@ -200,15 +217,26 @@ This repository tracks my progress through the Flutter framework, covering:
 - Custom widget creation
 - State management with Bloc and Cubit patterns
 - Navigation and routing with GoRouter
+- Network API integration and data handling
+- DTO and Entity patterns for data modeling
+- HTTP requests and JSON parsing
 - Platform-specific configurations
 - And more...
 
 ## Recent Learning Topics
 
+- **🌐 Lesson 26: Network API & DTO Integration**: Complete network data handling system
+  - Comprehensive network API integration with HTTP requests
+  - DTO (Data Transfer Object) pattern for raw JSON data handling
+  - Entity pattern for domain-specific data models
+  - Repository pattern for data access abstraction
+  - Automatic data loading and pull-to-refresh functionality
+  - Modern UI with English language support and error handling
+  - Clean two-layer architecture following Feature-First principles
 - **🏗️ Feature-First Architecture Refactoring**: Complete project restructuring
   - Migrated from lesson-based to feature-based organization
   - Implemented two-layer architecture (Presentation + Data)
-  - Reorganized all 6 features: custom_widgets, rating_system, counter, rate_app, animated_ball, user_profile
+  - Reorganized all 7 features: custom_widgets, rating_system, counter, rate_app, animated_ball, user_profile, network_api
   - Updated all import statements and dependencies
   - Created shared components directory for reusable widgets
   - Improved code maintainability and team collaboration
