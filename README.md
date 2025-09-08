@@ -10,71 +10,82 @@ A project for learning Flutter framework as part of the **Flutter Mobile Develop
 
 ## Project Structure
 
-This project contains various lessons and exercises for learning Flutter:
+This project follows **Feature-First Architecture** with **Two-Layer Design** for optimal code organization and maintainability:
 
 ```
 learning_flutter/
 ├── lib/                          # Main application code
-│   ├── features/                 # Feature-based organization
-│   │   └── homeworks/           # Homework assignments and exercises
-│   │       ├── lesson_13/       # Custom Widgets and Layout
-│   │       │   ├── custom_box.dart
-│   │       │   ├── homework_13_screen.dart
-│   │       │   └── README.md
-│   │       ├── lesson_14/       # Rating System Implementation
-│   │       │   ├── homework_14_screen.dart
-│   │       │   ├── rating_card.dart
-│   │       │   ├── models.dart
-│   │       │   ├── icons.dart
-│   │       │   └── README.md
-│   │       └── lesson_19/       # State Management with Bloc and Cubit
-│   │           ├── bloc_task/   # Bloc implementation
-│   │           │   ├── bloc_counter_screen.dart
-│   │           │   └── bloc/
-│   │           │       ├── counter_bloc.dart
-│   │           │       ├── counter_event.dart
-│   │           │       └── counter_state.dart
-│   │           └── cubit_task/  # Cubit implementation
-│   │               ├── cubit_counter_screen.dart
-│   │               └── cubit/
-│   │                   ├── counter_cubit.dart
-│   │                   └── counter_state.dart
-│   │       └── lesson_20/       # Rate App with BLoC Architecture
-│   │           ├── bloc/        # BLoC implementation
-│   │           │   ├── rate_app_bloc.dart
-│   │           │   ├── rate_app_event.dart
-│   │           │   ├── rate_app_state.dart
-│   │           │   └── constants.dart
-│   │           └── presentation/
-│   │               └── screens/
-│   │                   ├── rate_app_bloc_screen.dart
-│   │                   └── rate_app_cubit_screen.dart
-│   │       └── lesson_22/       # Advanced Animation with AnimationController
-│   │           ├── homework_lesson_22.dart
-│   │           └── README.md
-│   │       └── lesson_23/       # Error Handling with BLoC Pattern
-│   │           ├── data/
-│   │           │   └── repository/
-│   │           │       ├── entity/
-│   │           │       │   ├── user_entity.dart
-│   │           │       │   └── custom_server_error.dart
-│   │           │       └── fake_user_repository.dart
-│   │           ├── presentation/
-│   │           │   ├── cubit/
-│   │           │   │   ├── user_profile_cubit.dart
-│   │           │   │   └── user_profile_state.dart
-│   │           │   └── ui/
-│   │           │       └── screens/
-│   │           │           └── user_profile_homework_screen.dart
-│   │           └── README.md
-│   ├── widgets/                 # Global reusable widgets
-│   │   ├── custom_snackbar.dart # Custom snackbar with 4 states
-│   │   └── widgets.dart         # Widget exports
-│   ├── router/                  # Navigation and routing
-│   │   ├── app_router.dart      # GoRouter configuration
-│   │   └── screen_names.dart    # Route name definitions
-│   ├── home_page.dart           # Main home page with lesson navigation
-│   └── main.dart                # Application entry point
+│   ├── features/                 # Feature-based organization (Feature-First)
+│   │   ├── custom_widgets/       # Lesson 13: Custom Widgets and Layout
+│   │   │   └── presentation/
+│   │   │       └── ui/
+│   │   │           ├── screens/
+│   │   │           │   └── custom_widgets_screen.dart
+│   │   │           └── widgets/
+│   │   │               └── custom_box.dart
+│   │   ├── rating_system/        # Lesson 14: Rating System Implementation
+│   │   │   └── presentation/
+│   │   │       └── ui/
+│   │   │           ├── screens/
+│   │   │           │   └── rating_system_screen.dart
+│   │   │           └── widgets/
+│   │   │               ├── rating_card.dart
+│   │   │               ├── models.dart
+│   │   │               └── icons.dart
+│   │   ├── counter/              # Lesson 19: State Management with Bloc and Cubit
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── counter_bloc.dart
+│   │   │       │   ├── counter_cubit.dart
+│   │   │       │   ├── counter_event.dart
+│   │   │       │   ├── counter_state.dart
+│   │   │       │   └── counter_cubit_state.dart
+│   │   │       └── ui/
+│   │   │           └── screens/
+│   │   │               ├── counter_bloc_screen.dart
+│   │   │               └── counter_cubit_screen.dart
+│   │   ├── rate_app/             # Lesson 20: Rate App with BLoC Architecture
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── rate_app_bloc.dart
+│   │   │       │   ├── rate_app_cubit.dart
+│   │   │       │   ├── rate_app_event.dart
+│   │   │       │   ├── rate_app_state.dart
+│   │   │       │   └── constants.dart
+│   │   │       └── ui/
+│   │   │           └── screens/
+│   │   │               ├── rate_app_bloc_screen.dart
+│   │   │               └── rate_app_cubit_screen.dart
+│   │   ├── animated_ball/        # Lesson 22: Advanced Animation with AnimationController
+│   │   │   └── presentation/
+│   │   │       └── ui/
+│   │   │           └── screens/
+│   │   │               └── animated_ball_screen.dart
+│   │   └── user_profile/         # Lesson 23: Error Handling with BLoC Pattern
+│   │       ├── presentation/
+│   │       │   ├── bloc/
+│   │       │   │   ├── user_profile_cubit.dart
+│   │       │   │   └── user_profile_state.dart
+│   │       │   └── ui/
+│   │       │       └── screens/
+│   │       │           └── user_profile_homework_screen.dart
+│   │       └── data/
+│   │           ├── repositories/
+│   │           │   └── fake_user_repository.dart
+│   │           └── data_source/
+│   │               └── entities/
+│   │                   ├── user_entity.dart
+│   │                   └── custom_server_error.dart
+│   ├── shared/                   # Shared components across features
+│   │   └── widgets/
+│   │       ├── custom_snackbar.dart # Custom snackbar with 4 states
+│   │       ├── feature_card.dart    # Reusable feature navigation card
+│   │       └── widgets.dart         # Widget exports
+│   ├── router/                   # Navigation and routing
+│   │   ├── app_router.dart       # GoRouter configuration
+│   │   └── screen_names.dart     # Route name definitions
+│   ├── home_page.dart            # Main home page with lesson navigation
+│   └── main.dart                 # Application entry point
 ├── android/                     # Android platform-specific code
 │   ├── app/
 │   │   ├── build.gradle.kts
@@ -134,6 +145,34 @@ learning_flutter/
 └── README.md                 # This file
 ```
 
+## Architecture
+
+This project implements **Feature-First Architecture** with **Two-Layer Design**:
+
+### 🏗️ Feature-First Organization
+- **Features are isolated** - each feature contains all related code
+- **Easy navigation** - all feature code is in one place
+- **Team scalability** - different developers can work on different features
+- **Independent testing** - each feature can be tested separately
+
+### 📱 Two-Layer Architecture
+Each feature follows a clean two-layer structure:
+
+#### **Presentation Layer**
+- `presentation/bloc/` - BLoC/Cubit state management
+- `presentation/ui/` - Screens and widgets
+
+#### **Data Layer** (when needed)
+- `data/repositories/` - Data access abstraction
+- `data/data_source/` - Data sources and entities
+
+### 🎯 Benefits
+- ✅ **Maintainability** - Easy to find and modify code
+- ✅ **Scalability** - Simple to add new features
+- ✅ **Testability** - Each layer can be tested independently
+- ✅ **Team Collaboration** - Clear separation of concerns
+- ✅ **Code Reusability** - Shared components in `/shared/`
+
 ## Getting Started
 
 To run this project:
@@ -166,6 +205,18 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **🏗️ Feature-First Architecture Refactoring**: Complete project restructuring
+  - Migrated from lesson-based to feature-based organization
+  - Implemented two-layer architecture (Presentation + Data)
+  - Reorganized all 6 features: custom_widgets, rating_system, counter, rate_app, animated_ball, user_profile
+  - Updated all import statements and dependencies
+  - Created shared components directory for reusable widgets
+  - Improved code maintainability and team collaboration
+- **🎨 Enhanced UI Components**: Improved shared widget system
+  - Created `FeatureCard` widget for consistent feature navigation
+  - Implemented conditional styling based on interaction state
+  - Added proper null safety handling for optional callbacks
+  - Enhanced visual feedback with elevation and icon states
 - **Lesson 23: Error Handling with BLoC Pattern**: Implemented comprehensive error handling system
   - Custom error class `CustomServerError` for server-specific error handling
   - Repository-level error conversion from generic exceptions to custom errors
