@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/bloc_task/bloc/counter_bloc.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/bloc_task/bloc/counter_state.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit/counter_cubit.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit/counter_state.dart';
+
+import 'package:learning_flutter/features/counter/presentation/bloc/counter_bloc.dart';
+import 'package:learning_flutter/features/counter/presentation/bloc/counter_cubit.dart';
+import 'package:learning_flutter/features/counter/presentation/bloc/counter_cubit_state.dart';
+import 'package:learning_flutter/features/counter/presentation/bloc/counter_state.dart';
 import 'package:learning_flutter/router/screen_names.dart';
 
 class MyHomePage extends StatelessWidget {

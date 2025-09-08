@@ -1,12 +1,13 @@
 import 'package:go_router/go_router.dart';
-import 'package:learning_flutter/features/homeworks/lesson_13/homework_13_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_14/homework_14_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/bloc_task/bloc_counter_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_19/cubit_task/cubit_counter_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_20/presentation/screens/rate_app_bloc_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_20/presentation/screens/rate_app_cubit_screen.dart';
-import 'package:learning_flutter/features/homeworks/lesson_22/homework_lesson_22.dart';
-import 'package:learning_flutter/features/homeworks/lesson_23/presentation/ui/screens/user_profile_homework_screen.dart';
+
+import 'package:learning_flutter/features/animated_ball/presentation/ui/screens/animated_ball_screen.dart';
+import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_bloc_screen.dart';
+import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_cubit_screen.dart';
+import 'package:learning_flutter/features/custom_widgets/presentation/ui/screens/custom_widgets_screen.dart';
+import 'package:learning_flutter/features/rate_app/presentation/ui/screens/rate_app_bloc_screen.dart';
+import 'package:learning_flutter/features/rate_app/presentation/ui/screens/rate_app_cubit_screen.dart';
+import 'package:learning_flutter/features/rating_system/presentation/ui/screens/rating_system_screen.dart';
+import 'package:learning_flutter/features/user_profile/presentation/ui/screens/user_profile_homework_screen.dart';
 import 'package:learning_flutter/home_page.dart';
 import 'package:learning_flutter/router/screen_names.dart';
 
