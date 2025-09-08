@@ -7,6 +7,7 @@ import 'package:learning_flutter/features/counter/presentation/bloc/counter_cubi
 import 'package:learning_flutter/features/counter/presentation/bloc/counter_cubit_state.dart';
 import 'package:learning_flutter/features/counter/presentation/bloc/counter_state.dart';
 import 'package:learning_flutter/router/screen_names.dart';
+import 'package:learning_flutter/shared/widgets/feature_card.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -19,79 +20,72 @@ class MyHomePage extends StatelessWidget {
       title: const Text('robot-dreams-code homeworks'),
     ),
     body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text('.....'),
-          Text('...Dart homeworks in another project...'),
-          ElevatedButton(
-            child: const Text('Lesson 13: Widgets pt.1'),
-            onPressed: () {
-              context.goNamed(ScreenNames.lesson13.name);
-            },
-          ),
-          ElevatedButton(
-            child: const Text('Lesson 14: Widgets pt.2'),
-            onPressed: () {
-              context.goNamed(ScreenNames.lesson14.name);
-            },
-          ),
-          Text('Lesson 15: Widgets composition (w/o h/w)'),
-          Text('Lesson 16: Navigation Basics (w/o h/w)'),
-          Text('Lesson 17: Popular packages of Nav (w/o visible h/w)'),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 10,
-            children: [
-              BlocBuilder<CounterCubit, CounterCubitState>(
-                builder: (context, state) => ElevatedButton(
-                  child: Text('Lesson 19: Cubit (${state.counter})'),
-                  onPressed: () {
-                    context.goNamed(ScreenNames.lesson19Cubit.name);
-                  },
-                ),
-              ),
-              BlocBuilder<CounterBloc, CounterState>(
-                builder: (context, state) => ElevatedButton(
-                  child: Text('Lesson 19: Bloc (${state.counter})'),
-                  onPressed: () {
-                    context.goNamed(ScreenNames.lesson19Bloc.name);
-                  },
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 10,
-            children: [
-              ElevatedButton(
-                child: const Text('L 20: Rate App Cubit'),
-                onPressed: () {
-                  context.goNamed(ScreenNames.lesson20Cubit.name);
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            FeatureCard(
+              title: 'Dart homeworks in another project...',
+              onTap: null,
+            ),
+            FeatureCard(
+              title: 'L 13: Widgets pt.1',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson13.name);
+              },
+            ),
+            FeatureCard(
+              title: 'L 14: Widgets pt.2',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson14.name);
+              },
+            ),
+            FeatureCard(title: 'L 15: Widgets composition', onTap: null),
+            FeatureCard(title: 'L 16: Navigation Basics', onTap: null),
+            FeatureCard(title: 'L 17: Popular packages of Nav', onTap: null),
+            BlocBuilder<CounterCubit, CounterCubitState>(
+              builder: (context, state) => FeatureCard(
+                title: 'L 19: Cubit (${state.counter})',
+                onTap: () {
+                  context.goNamed(ScreenNames.lesson19Cubit.name);
                 },
               ),
-              ElevatedButton(
-                child: const Text('L 20: Rate App BLoC'),
-                onPressed: () {
-                  context.goNamed(ScreenNames.lesson20Bloc.name);
+            ),
+            BlocBuilder<CounterBloc, CounterState>(
+              builder: (context, state) => FeatureCard(
+                title: 'L 19: Bloc (${state.counter})',
+                onTap: () {
+                  context.goNamed(ScreenNames.lesson19Bloc.name);
                 },
               ),
-            ],
-          ),
-          ElevatedButton(
-            child: const Text('L 22: Animated Ball'),
-            onPressed: () {
-              context.goNamed(ScreenNames.lesson22.name);
-            },
-          ),
-          ElevatedButton(
-            child: const Text('L 23: Error Handling'),
-            onPressed: () {
-              context.goNamed(ScreenNames.lesson23.name);
-            },
-          ),
-        ],
+            ),
+            FeatureCard(
+              title: 'L 20: Rate App Cubit',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson20Cubit.name);
+              },
+            ),
+            FeatureCard(
+              title: 'L 20: Rate App BLoC',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson20Bloc.name);
+              },
+            ),
+            FeatureCard(
+              title: 'L 22: Animated Ball',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson22.name);
+              },
+            ),
+            FeatureCard(
+              title: 'L 23: Error Handling',
+              onTap: () {
+                context.goNamed(ScreenNames.lesson23.name);
+              },
+            ),
+          ],
+        ),
       ),
     ),
   );
