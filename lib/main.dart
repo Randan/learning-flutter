@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:learning_flutter/features/counter/presentation/bloc/counter_bloc.dart';
 import 'package:learning_flutter/features/counter/presentation/bloc/counter_cubit.dart';
 import 'package:learning_flutter/features/rate_app/presentation/bloc/rate_app_bloc.dart';
@@ -8,7 +9,9 @@ import 'package:learning_flutter/features/user_profile/data/repositories/fake_us
 import 'package:learning_flutter/features/user_profile/presentation/bloc/user_profile_cubit.dart';
 import 'package:learning_flutter/router/app_router.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 

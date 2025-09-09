@@ -90,6 +90,12 @@ class MyHomePage extends StatelessWidget {
                 context.goNamed(ScreenNames.networkApi.name);
               },
             ),
+            FeatureCard(
+              title: 'L 27: Alerts Info',
+              onTap: () {
+                context.goNamed(ScreenNames.alertsInfo.name);
+              },
+            ),
           ],
         ),
       ),

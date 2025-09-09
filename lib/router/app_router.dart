@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 
+import 'package:learning_flutter/features/alerts_info/presentation/ui/screens/alerts_info_screen.dart';
 import 'package:learning_flutter/features/animated_ball/presentation/ui/screens/animated_ball_screen.dart';
 import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_bloc_screen.dart';
 import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_cubit_screen.dart';
@@ -62,6 +63,11 @@ final appRouter = GoRouter(
           path: 'network_api',
           name: ScreenNames.networkApi.name,
           builder: (context, state) => const NetworkApiScreen(),
+        ),
+        GoRoute(
+          path: 'alerts_info',
+          name: ScreenNames.alertsInfo.name,
+          builder: (context, state) => const AlertsInfoScreen(),
         ),
       ],
     ),
