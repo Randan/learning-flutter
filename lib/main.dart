@@ -11,7 +11,11 @@ import 'package:learning_flutter/router/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: '.env');
+  try {
+    await dotenv.load(fileName: '.env');
+  } catch (e) {
+    print('Warning: .env file not found: $e');
+  }
   runApp(const MyApp());
 }
 

@@ -1,12 +1,18 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 
 class LocationService {
   static Future<String?> getCurrentCity() async {
     try {
-      // Перевіряємо дозволи на геолокацію
+      if (kIsWeb) {
+        return _createErrorJson(
+          'Location service not available on web platform',
+        );
+      }
+
       var permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
@@ -19,12 +25,10 @@ class LocationService {
         return _createErrorJson('Location permission permanently denied');
       }
 
-      // Отримуємо поточну позицію
       final position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
       );
 
-      // Отримуємо адресу за координатами
       final placemarks = await placemarkFromCoordinates(
         position.latitude,
         position.longitude,
@@ -100,6 +104,10 @@ class LocationService {
 
   static Future<Position?> getCurrentPosition() async {
     try {
+      if (kIsWeb) {
+        return null;
+      }
+
       var permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();

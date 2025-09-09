@@ -10,10 +10,7 @@ abstract class AlertsApiService {
   factory AlertsApiService(Dio dio, {String baseUrl}) = _AlertsApiService;
 
   @GET('/v1/alerts/active.json')
-  Future<AlertsResponseDto> getAlertsForLocations(@Query('token') String token);
-
-  @GET('/v1/alerts/active.json')
-  Future<AlertsResponseDto> getActiveAlerts(@Query('token') String token);
+  Future<AlertsResponseDto> getAlertsForLocations();
 }
 
 class AlertsApiClient {
@@ -29,7 +26,7 @@ class AlertsApiClient {
         onRequest: (options, handler) {
           final token = dotenv.env['ALERTS_API_TOKEN'];
           if (token != null) {
-            options.headers['Authorization'] = 'Bearer $token';
+            options.queryParameters['token'] = token;
           }
           options.headers['Content-Type'] = 'application/json';
           handler.next(options);
