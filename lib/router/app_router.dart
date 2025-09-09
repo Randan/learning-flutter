@@ -4,6 +4,7 @@ import 'package:learning_flutter/features/animated_ball/presentation/ui/screens/
 import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_bloc_screen.dart';
 import 'package:learning_flutter/features/counter/presentation/ui/screens/counter_cubit_screen.dart';
 import 'package:learning_flutter/features/custom_widgets/presentation/ui/screens/custom_widgets_screen.dart';
+import 'package:learning_flutter/features/network_api/presentation/screens/network_api_screen.dart';
 import 'package:learning_flutter/features/rate_app/presentation/ui/screens/rate_app_bloc_screen.dart';
 import 'package:learning_flutter/features/rate_app/presentation/ui/screens/rate_app_cubit_screen.dart';
 import 'package:learning_flutter/features/rating_system/presentation/ui/screens/rating_system_screen.dart';
@@ -18,44 +19,49 @@ final appRouter = GoRouter(
       builder: (context, state) => const MyHomePage(),
       routes: <RouteBase>[
         GoRoute(
-          path: 'lesson_13',
-          name: ScreenNames.lesson13.name,
-          builder: (context, state) => const Lesson13(),
+          path: 'custom_widgets',
+          name: ScreenNames.customWidgets.name,
+          builder: (context, state) => const CustomWidgetsScreen(),
         ),
         GoRoute(
-          path: 'lesson_14',
-          name: ScreenNames.lesson14.name,
-          builder: (context, state) => const Lesson14(),
+          path: 'rating_system',
+          name: ScreenNames.ratingSystem.name,
+          builder: (context, state) => const RatingSystemScreen(),
         ),
         GoRoute(
-          path: 'lesson_19_bloc',
-          name: ScreenNames.lesson19Bloc.name,
+          path: 'counter_bloc',
+          name: ScreenNames.counterBloc.name,
           builder: (context, state) => const BlocCounterScreen(),
         ),
         GoRoute(
-          path: 'lesson_19_cubit',
-          name: ScreenNames.lesson19Cubit.name,
+          path: 'counter_cubit',
+          name: ScreenNames.counterCubit.name,
           builder: (context, state) => const CubitCounterScreen(),
         ),
         GoRoute(
-          path: 'lesson_20_cubit',
-          name: ScreenNames.lesson20Cubit.name,
+          path: 'rate_app_cubit',
+          name: ScreenNames.rateAppCubit.name,
           builder: (context, state) => const RateAppCubitScreen(),
         ),
         GoRoute(
-          path: 'lesson_20_bloc',
-          name: ScreenNames.lesson20Bloc.name,
+          path: 'rate_app_bloc',
+          name: ScreenNames.rateAppBloc.name,
           builder: (context, state) => const RateAppBlocScreen(),
         ),
         GoRoute(
-          path: 'lesson_22',
-          name: ScreenNames.lesson22.name,
-          builder: (context, state) => const HomeworkLesson22(),
+          path: 'animated_ball',
+          name: ScreenNames.animatedBall.name,
+          builder: (context, state) => const AnimatedBallScreen(),
         ),
         GoRoute(
-          path: 'lesson_23',
-          name: ScreenNames.lesson23.name,
+          path: 'user_profile',
+          name: ScreenNames.userProfile.name,
           builder: (context, state) => const UserProfileHomeworkScreen(),
+        ),
+        GoRoute(
+          path: 'network_api',
+          name: ScreenNames.networkApi.name,
+          builder: (context, state) => const NetworkApiScreen(),
         ),
       ],
     ),

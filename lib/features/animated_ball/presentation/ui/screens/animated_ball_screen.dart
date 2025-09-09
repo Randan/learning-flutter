@@ -3,14 +3,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeworkLesson22 extends StatefulWidget {
-  const HomeworkLesson22({super.key});
+class AnimatedBallScreen extends StatefulWidget {
+  const AnimatedBallScreen({super.key});
 
   @override
-  State<HomeworkLesson22> createState() => _HomeworkLesson22State();
+  State<AnimatedBallScreen> createState() => _AnimatedBallScreenState();
 }
 
-class _HomeworkLesson22State extends State<HomeworkLesson22>
+class _AnimatedBallScreenState extends State<AnimatedBallScreen>
     with TickerProviderStateMixin {
   late AnimationController _positionController;
   late AnimationController _rotationController;

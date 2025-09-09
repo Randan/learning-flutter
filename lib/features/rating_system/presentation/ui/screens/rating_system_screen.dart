@@ -5,14 +5,14 @@ import 'package:learning_flutter/features/rating_system/presentation/ui/widgets/
 import 'package:learning_flutter/features/rating_system/presentation/ui/widgets/models.dart';
 import 'package:learning_flutter/features/rating_system/presentation/ui/widgets/rating_card.dart';
 
-class Lesson14 extends StatefulWidget {
-  const Lesson14({super.key});
+class RatingSystemScreen extends StatefulWidget {
+  const RatingSystemScreen({super.key});
 
   @override
-  State<Lesson14> createState() => _Lesson14State();
+  State<RatingSystemScreen> createState() => _RatingSystemScreenState();
 }
 
-class _Lesson14State extends State<Lesson14> {
+class _RatingSystemScreenState extends State<RatingSystemScreen> {
   late RatingState _ratingState;
 
   @override
