@@ -5,6 +5,20 @@ This document tracks the learning progress and changes made during the Flutter l
 ## [Unreleased]
 
 ### Added
+- **🚨 Lesson 27: Real-time Alerts System with Location Services**: Complete alerts monitoring system
+  - Real-time alerts integration with Ukrainian alerts API (api.alerts.in.ua)
+  - Location services integration with geolocator and geocoding packages
+  - BLoC state management for complex alert and location state handling
+  - Test mode functionality for simulating alerts in different regions (Lugansk region)
+  - Pull-to-refresh functionality for real-time data updates
+  - Modern UI with proper error handling and loading states
+  - Clean architecture with DTO/Entity patterns and repository abstraction
+  - Environment variables management with flutter_dotenv for API token security
+  - Comprehensive error handling and user feedback system
+  - Location matching algorithm for city and administrative area detection
+  - Test constants and error messages centralization for maintainability
+  - Advanced state management with clearMatchedLocation and clearUserAlert patterns
+  - Proper null safety and validation throughout the application
 - **🌐 Lesson 26: Network API & DTO Integration**: Complete network data handling system
   - Comprehensive network API integration with HTTP requests
   - DTO (Data Transfer Object) pattern implementation for raw JSON data
@@ -127,6 +141,11 @@ This document tracks the learning progress and changes made during the Flutter l
   - Proper state watching with context.watch()
 - **Dependencies Update**
   - Added flutter_bloc: ^8.1.4 for state management
+  - Added dio: ^5.4.0 for advanced HTTP client functionality
+  - Added retrofit: ^4.0.3 for type-safe HTTP client generation
+  - Added geolocator: ^10.1.0 for location services and GPS functionality
+  - Added geocoding: ^2.1.1 for address geocoding and reverse geocoding
+  - Added flutter_dotenv: ^5.1.0 for environment variables management
   - Maintained existing dependencies for navigation and UI
 - **Advanced Navigation System**: Implemented GoRouter for modern routing
   - Replaced traditional Navigator with GoRouter for declarative routing
@@ -265,6 +284,18 @@ This document tracks the learning progress and changes made during the Flutter l
   - Improved user interface aesthetics
 
 ### Learning Progress
+- **🚨 Real-time Alerts & Location Services**: Mastered advanced location-based services
+  - Learned geolocator package for GPS location services and permissions
+  - Implemented geocoding for address conversion and reverse geocoding
+  - Mastered flutter_dotenv for secure environment variable management
+  - Practiced Dio and Retrofit for advanced HTTP client functionality
+  - Implemented complex BLoC state management with multiple related states
+  - Learned location matching algorithms for city and region detection
+  - Practiced test mode implementation for development and debugging
+  - Mastered pull-to-refresh patterns with proper state resetting
+  - Implemented comprehensive error handling for location and network services
+  - Learned proper null safety patterns and validation techniques
+  - Practiced code organization with constants and error message centralization
 - **🌐 Network Integration & Data Patterns**: Mastered API integration and data handling
   - Learned DTO (Data Transfer Object) pattern for raw API data handling
   - Implemented Entity pattern for domain-specific data models

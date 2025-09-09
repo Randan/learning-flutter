@@ -76,22 +76,48 @@ learning_flutter/
 │   │   │           └── entities/
 │   │   │               ├── user_entity.dart
 │   │   │               └── custom_server_error.dart
-│   │   └── network_api/          # Lesson 26: Network API & DTO Integration
+│   │   ├── network_api/          # Lesson 26: Network API & DTO Integration
+│   │   │   ├── presentation/
+│   │   │   │   └── screens/
+│   │   │   │       └── network_api_screen.dart
+│   │   │   └── data/
+│   │   │       ├── data_source/
+│   │   │       │   └── cheque_remote_data_source.dart
+│   │   │       ├── dto/
+│   │   │       │   └── cheque_dto.dart
+│   │   │       ├── entity/
+│   │   │       │   └── cheque_entity.dart
+│   │   │       ├── encode_decode/
+│   │   │       │   ├── cheque_decoder.dart
+│   │   │       │   └── cheque_encoder.dart
+│   │   │       └── repositories/
+│   │   │           └── cheque_repository.dart
+│   │   └── alerts_info/          # Lesson 27: Real-time Alerts System with Location Services
 │   │       ├── presentation/
-│   │       │   └── screens/
-│   │       │       └── network_api_screen.dart
+│   │       │   ├── bloc/
+│   │       │   │   ├── alerts_bloc.dart
+│   │       │   │   ├── alerts_event.dart
+│   │       │   │   └── alerts_state.dart
+│   │       │   ├── ui/
+│   │       │   │   └── screens/
+│   │       │   │       └── alerts_info_screen.dart
+│   │       │   └── constants/
+│   │       │       ├── error_messages.dart
+│   │       │       └── test_constants.dart
 │   │       └── data/
 │   │           ├── data_source/
-│   │           │   └── cheque_remote_data_source.dart
+│   │           │   ├── alerts_api_service.dart
+│   │           │   └── locations_remote_data_source.dart
 │   │           ├── dto/
-│   │           │   └── cheque_dto.dart
+│   │           │   ├── alert_dto.dart
+│   │           │   └── alerts_response_dto.dart
 │   │           ├── entity/
-│   │           │   └── cheque_entity.dart
-│   │           ├── encode_decode/
-│   │           │   ├── cheque_decoder.dart
-│   │           │   └── cheque_encoder.dart
-│   │           └── repositories/
-│   │               └── cheque_repository.dart
+│   │           │   ├── alert_entity.dart
+│   │           │   └── location_entity.dart
+│   │           ├── repositories/
+│   │           │   └── locations_repository.dart
+│   │           └── services/
+│   │               └── location_service.dart
 │   ├── shared/                   # Shared components across features
 │   │   └── widgets/
 │   │       ├── custom_snackbar.dart # Custom snackbar with 4 states
@@ -205,6 +231,11 @@ The project uses the following key dependencies:
 - **go_router**: ^16.0.0 - Advanced routing and navigation
 - **flutter_bloc**: ^8.1.4 - State management with Bloc pattern
 - **http**: ^1.1.0 - HTTP requests for network API integration
+- **dio**: ^5.4.0 - Advanced HTTP client with interceptors
+- **retrofit**: ^4.0.3 - Type-safe HTTP client generator
+- **geolocator**: ^10.1.0 - Location services and GPS functionality
+- **geocoding**: ^2.1.1 - Address geocoding and reverse geocoding
+- **flutter_dotenv**: ^5.1.0 - Environment variables management
 - **flutter_svg**: ^2.2.0 - SVG image support
 - **cupertino_icons**: ^1.0.8 - iOS-style icons
 
@@ -225,6 +256,16 @@ This repository tracks my progress through the Flutter framework, covering:
 
 ## Recent Learning Topics
 
+- **🚨 Lesson 27: Real-time Alerts System with Location Services**: Complete alerts monitoring system
+  - Real-time alerts integration with Ukrainian alerts API (api.alerts.in.ua)
+  - Location services integration with geolocator and geocoding packages
+  - BLoC state management for complex alert and location state handling
+  - Test mode functionality for simulating alerts in different regions
+  - Pull-to-refresh functionality for real-time data updates
+  - Modern UI with proper error handling and loading states
+  - Clean architecture with DTO/Entity patterns and repository abstraction
+  - Environment variables management with flutter_dotenv
+  - Comprehensive error handling and user feedback system
 - **🌐 Lesson 26: Network API & DTO Integration**: Complete network data handling system
   - Comprehensive network API integration with HTTP requests
   - DTO (Data Transfer Object) pattern for raw JSON data handling
